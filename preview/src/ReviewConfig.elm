@@ -18,6 +18,7 @@ import NoUnused.Exports
 import NoUnused.Modules
 import NoUnused.Parameters
 import NoUnused.Patterns
+import NoUnused.RecordFields
 import NoUnused.Variables
 import Review.Rule exposing (Rule)
 
@@ -25,6 +26,7 @@ import Review.Rule exposing (Rule)
 config : List Rule
 config =
     [ NoUnused.CustomTypeConstructors.rule []
+    , NoUnused.RecordFields.rule
     , NoUnused.CustomTypeConstructorArgs.rule
     , NoUnused.Dependencies.rule
     , NoUnused.Exports.rule
